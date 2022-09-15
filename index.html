@@ -12,7 +12,6 @@
 </head>
 <body>
         <header>
-            <div class="section1">
                 <nav class="navbar">
                     <div class="logo">
                         <img src="./Assets/logo-club.png" alt="" id="logo">
@@ -23,21 +22,31 @@
                             <li><a href="#link">OBJECTIFS</a></li>
                             <li><a href="#link">CELLULES</a></li>
                             <li><a href="#link">BUREAU EXECUTIF</a></li>
-                            <li><a href="#link">CONTACTEZ-NOUS</a></li>
+                            <button class="header-button">
+                                <a href="" class="contact"><span>CONTACTEZ-NOUS</span></a>
+                            </button>
                         </ul>
                     </div>
                     <img src="./Assets/Navigation.png" alt="menu" class="menu">
                 </nav>
-            </div>
-            <div class="div section2">
-                <div class="name">MINES IT</div>
+            
+            <div class=" section2">
+                <div class="header-title">MINES IT</div>
                 <div class="club">CLUB</div>
                 <div class="join">
                     <button>
-                        <a href="">REJOIGNEZ-NOUS</a>
+                        <a href="" class="rejoignez-nous">REJOIGNEZ-NOUS</a>
                     </button>
                 </div>
             </div>
         </header>
 </body>
+  <script>
+    const menu = document.querySelector(".menu")
+    const navLinks = document.querySelector(".nav-links")
+
+    menu.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
 </html>

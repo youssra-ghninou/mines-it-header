@@ -13,40 +13,135 @@ header{
 #logo{
     width: 158px;
     height: 104px;
-    top: 36px;
-    left: 42px;
+    position: relative;
+    left: 10px;
+    top: 10px;
 }
 .navbar{
     position: absolute;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     align-items: center;
+
 }
 .navbar a{
-    color:#434343 ;
-    align-items: center;
-    
+    color:rgba(217, 217, 217, 0.6) ;
+    font-size: 18px;
 }
-
+.navbar a:hover{
+    color:#B60707 ;
+}
+.navbar .nav-links ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 .navbar .menu{
+    display: none;
     position: absolute;
     top: 30px;
     right: 30px;
 }
-.navbar .nav-links ul{
+.section2{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 300px;
+    gap: 1rem;
 }
-.navbar .nav-links ul li{
-    margin: 0 25px;
+.header-title{
+    color:#B60707 ;
+    font-size: 90px;
+    font-weight: bold;
 }
-@media screen and (max-width: 900px){
+.club{
+    color: #FFFFFF;
+    font-size: 70px;
+}
+button{
+    width: 245px;
+    height: 62px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+}
+.rejoignez-nous{
+    color:#B60707 ;
+    font-weight: 800;
+    font-size: 18px;
+}
+span{
+    color:#B60707 ;
+    font-weight: 800;
+    font-size:18px ;
+}
+@media screen and (max-width: 1024px){
+    .navbar{
+        padding: 0;
+    }
+    #logo{
+        width: 58px;
+        height: 40px;
+    }
+    .navbar a{
+        font-size: 12px;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .navbar .menu{
+        display: block;
+        width: 35px;
+        top: 10px;
+        right: 20px;
+    }
     .nav-links{
-        display: none; 
+        top: 0;
+        left: 0;
+        padding-bottom: 10px;
         position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-left: -100%;
+        background-color: rgba(225, 225, 225, 0.20);
+        backdrop-filter: blur(7px);
+        transition: all 0.5s ease ;
+        border-radius: 5px;
+    }
+    .nav-links ul{
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul{
+        gap: 0.25rem;
+    }
+    .navbar .nav-links ul li{
+        margin: 5px 0;
+    }
+    button{
+        width: 120px;
+        height: 32px;
+    }
+    span{
+        font-size: 10px;
+    }
+    .header-title{
+        font-size: 50px;
+    }
+    .club{
+        font-size: 40px;
+    }
+    .rejoignez-nous{
+        font-size: 10px;
+    }
+    .section2{
+        top: 200px;
     }
 }
